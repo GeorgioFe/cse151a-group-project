@@ -11,4 +11,4 @@ The Alzheimer’s MRI Image Dataset contains approximately 6400 MRI images, divi
 ## Data Exploration
 
 ## Data Preprocessing
-(answer How will you preprocess your data?)
+(How will you preprocess your data?)
