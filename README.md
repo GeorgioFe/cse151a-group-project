@@ -52,5 +52,22 @@ To get a better visual understanding of the dataset, we plotted examples of imag
 The data exploration phase has provided us with a comprehensive understanding of our dataset. By ensuring uniform image sizes, consistent image quality, uniform grayscale intensity levels, and planning for image normalization, we have laid a strong foundation for training our CNN and QCNN models. However, the class imbalance issue needs to be addressed in the preprocessing step. The details of addressing class imbalance, normalization, and other preprocessing steps will be discussed in the preprocessing section.
 
 
-## Data Preprocessing
-(How will you preprocess your data?)
+## Data Preprocessing (Milestone 3)
+
+The preprocessing phase is crucial for preparing our MRI image dataset for training our models. This phase involves several essential steps to ensure that the data is in the best possible format for model training.
+
+### 1. Addressing Class Imbalance
+
+Given the significant class imbalance in our dataset, we are looking into different ways we can handle it. Here are some methods:
+- Random Under-Sampling
+- Random Over-Sampling
+- Tomek Links
+- Synthetic Minority Oversampling Technique (SMOTE)
+- NearMiss
+- Penalize Algorithms (Cost-Sensitive Training)
+- Change the Performance Metric
+
+### 2. Image Normalization
+
+Normalization is essential for standardizing the pixel values across all images. We will use the following normalization technique:
+- Scaling to [0, 1]: All pixel values will be divided by 255 to scale them to the range [0, 1]. This is because pixel values in an 8-bit image range from 0 to 255, and dividing by 255 scales them to the desired range.
