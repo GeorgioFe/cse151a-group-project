@@ -20,7 +20,36 @@ We assessed the distribution of images across the four classes (Mild Demented, M
 Below are the histograms showing the number of samples per class for the training and testing sets:
 
 
-![training](https://github.com/user-attachments/assets/e2e828d2-3977-43d4-920e-7e8563dfaef2) ![test](https://github.com/user-attachments/assets/5c0931bd-0e9f-4885-9ad2-326446dfc80c)
+![training](https://github.com/user-attachments/assets/e2e828d2-3977-43d4-920e-7e8563dfaef2) 
+![test](https://github.com/user-attachments/assets/5c0931bd-0e9f-4885-9ad2-326446dfc80c)
+
+As illustrated in the histograms, there is a significant imbalance in the dataset. The "Non Demented" class has the highest number of samples, followed by "Very Mild Demented", "Mild Demented", and lastly, "Moderate Demented". This imbalance poses a challenge as the model might become biased towards the classes with more samples, potentially reducing the accuracy for underrepresented classes.
+
+The challenge with imbalanced datasets is that classification models attempt to categorize data into different buckets. In an imbalanced dataset, one bucket makes up a large portion of the training dataset (the majority class), while the other bucket is underrepresented in the dataset (the minority class). The problem with a model trained on imbalanced data is that the model learns that it can achieve high accuracy by consistently predicting the majority class, even if recognizing the minority class is equally or more important when applying the model to a real-world scenario.
+
+Consider the case of our Alzheimer's MRI image dataset. Most of the images collected fall into the "Non Demented" category, while the "Moderate Demented" patients make up a much smaller portion of the data. During training, the classification model learns that it can achieve high accuracy by predicting "Non Demented" for every MRI image it encounters. That’s a huge problem because what medical professionals really need the model to do is identify those patients in the early or moderate stages of Alzheimer's disease.
+
+More on this will be talked in the Preproccessing step.
+
+### 3. Bluriness Check:
+
+To guarantee that our dataset consists of high-quality images, we checked for image blurriness. Our analysis showed that all images were of consistent quality with no outliers in terms of blurriness (code available in the linked notebook). This ensures that our model is trained on clear and precise images, enhancing its accuracy and reliability.
+
+### 4. Color Distribution
+
+Given that MRI images are typically grayscale, we examined the color distribution for each class to verify uniformity. We plotted the color distribution and confirmed that the grayscale intensity levels were consistent across all classes. This step helps in understanding the inherent differences in image characteristics across different stages of Alzheimer's disease. Plotted below:
+
+![mean_intensity_values](https://github.com/user-attachments/assets/ffbd3acf-ab0e-48cf-bee9-75ef2e930df1)
+
+### 5. Visualizing Sample Images
+
+To get a better visual understanding of the dataset, we plotted examples of images from each class. These visualizations provided insights into the subtle differences and similarities in MRI images for each stage of Alzheimer’s, which is crucial for model training.
+
+![samples](https://github.com/user-attachments/assets/c142f2f3-fa35-4428-ab5e-a72e5f58a8da)
+
+### 6. Summary of Data
+
+The data exploration phase has provided us with a comprehensive understanding of our dataset. By ensuring uniform image sizes, consistent image quality, uniform grayscale intensity levels, and planning for image normalization, we have laid a strong foundation for training our CNN and QCNN models. However, the class imbalance issue needs to be addressed in the preprocessing step. The details of addressing class imbalance, normalization, and other preprocessing steps will be discussed in the preprocessing section.
 
 
 ## Data Preprocessing
