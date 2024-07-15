@@ -20,8 +20,7 @@ We assessed the distribution of images across the four classes (Mild Demented, M
 Below are the histograms showing the number of samples per class for the training and testing sets:
 
 
-![training](https://github.com/user-attachments/assets/e2e828d2-3977-43d4-920e-7e8563dfaef2)
-![test](https://github.com/user-attachments/assets/5c0931bd-0e9f-4885-9ad2-326446dfc80c)
+![training](https://github.com/user-attachments/assets/e2e828d2-3977-43d4-920e-7e8563dfaef2) ![test](https://github.com/user-attachments/assets/5c0931bd-0e9f-4885-9ad2-326446dfc80c)
 
 
 ## Data Preprocessing
