@@ -59,15 +59,7 @@ The data exploration phase has provided us with a comprehensive understanding of
 The preprocessing phase is crucial for preparing our MRI image dataset for training our models. This phase involves several essential steps to ensure that the data is in the best possible format for model training.
 
 ### 1. Addressing Class Imbalance
-
-Given the significant class imbalance in our dataset, we are looking into different ways we can handle it. Here are some methods:
-- Random Under-Sampling
-- Random Over-Sampling
-- Tomek Links
-- Synthetic Minority Oversampling Technique (SMOTE)
-- NearMiss
-- Penalize Algorithms (Cost-Sensitive Training)
-- Change the Performance Metric
+Given the significant class imbalance in our dataset, we will be combining all the cases of alzheimers into 1 class. Therefore, our datasets will be sorted into 2 classes, Not Demented and Demented. This will solve the class imbalance issue, as the Not Demented class has contains 3200 images spanning both the test and training sets, and the Demented class will the same amount, 3200 images spanning both the test and training sets.  
 
 ### 2. Image Normalization
 
