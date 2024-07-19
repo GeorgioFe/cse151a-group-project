@@ -54,12 +54,12 @@ To get a better visual understanding of the dataset, we plotted examples of imag
 The data exploration phase has provided us with a comprehensive understanding of our dataset. By ensuring uniform image sizes, consistent image quality, uniform grayscale intensity levels, and planning for image normalization, we have laid a strong foundation for training our CNN and QCNN models. However, the class imbalance issue needs to be addressed in the preprocessing step. The details of addressing class imbalance, normalization, and other preprocessing steps will be discussed in the preprocessing section.
 
 
-## Data Preprocessing (Milestone 3)
+## Data Preprocessing
 
 The preprocessing phase is crucial for preparing our MRI image dataset for training our models. This phase involves several essential steps to ensure that the data is in the best possible format for model training.
 
 ### 1. Addressing Class Imbalance
-Given the significant class imbalance in our dataset, we will be combining all the cases of alzheimers into 1 class. Therefore, our datasets will be sorted into 2 classes, Not Demented and Demented. This will solve the class imbalance issue, as the Not Demented class has contains 3200 images spanning both the test and training sets, and the Demented class will the same amount, 3200 images spanning both the test and training sets.  
+Given the significant class imbalance in our dataset, we will be combining all the cases of Alzheimer's into 1 class. Therefore, our datasets will be sorted into 2 classes, Not Demented and Demented. This will solve the class imbalance issue, as the Not Demented class contains 3200 images spanning both the test and training sets, and the Demented class will have the same amount, 3200 images spanning both the test and training sets. More Specifically, We have 639 Demented cases and 640 Non Demented cases for our test data and 2561 Demented cases and 2560 Non Demented cases for our training data.
 
 ### 2. Image Normalization
 
