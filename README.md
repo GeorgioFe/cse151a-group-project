@@ -64,4 +64,4 @@ Given the significant class imbalance in our dataset, we will be combining all t
 ### 2. Image Normalization
 
 Normalization is essential for standardizing the pixel values across all images. We will use the following normalization technique:
-- Scaling to [0, 1]: All pixel values will be divided by 255 to scale them to the range [0, 1]. This is because pixel values in an 8-bit image range from 0 to 255, and dividing by 255 scales them to the desired range.
+- Scaling to [0, 1]: All pixel values will be divided by 255 to scale them to the range [0, 1]. This is because pixel values in an 8-bit image range from 0 to 255, and dividing by 255 scales them to the desired range, basically having the same effect as a MinMax normalization.
