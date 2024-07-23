@@ -65,3 +65,13 @@ Given the significant class imbalance in our dataset, we will be combining all t
 
 Normalization is essential for standardizing the pixel values across all images. We will use the following normalization technique:
 - Scaling to [0, 1]: All pixel values will be divided by 255 to scale them to the range [0, 1]. This is because pixel values in an 8-bit image range from 0 to 255, and dividing by 255 scales them to the desired range, basically having the same effect as a MinMax normalization.
+
+## First Model
+
+
+For our first model, we built a convolutional neural network using TensorFlow and Keras to classify MRI scans into demented and non-demented categories. Our model consisted of several convolutional and max-pooling layers, followed by a fully connected layer. We trained the model with a batch size of 32 for 10 epochs, monitoring its performance using a separate validation set. After training, we evaluated the model on both the training and test datasets to measure its accuracy and loss, and visualized the training progress by plotting the training and validation loss and accuracy over the epochs.
+
+The results of our model can be seen on the following graphs:
+
+![metrics](https://github.com/user-attachments/assets/c497cf5e-9e0d-43d6-b768-aaa678fce245)
+
