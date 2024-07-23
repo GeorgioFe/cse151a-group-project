@@ -3,6 +3,7 @@
 This project aims to develop a multiclass classifier that predicts the presence and stage of Alzheimer's disease using MRI images. Utilizing a comprehensive dataset of approximately 5,000 images categorized into Mild Demented, Moderate Demented, Non Demented, and Very Mild Demented, we will create a traditional CNN multi-class classifier and, if time permits, a quantum-based (QCNN) classifier to compare accuracy and training speed. Additionally, we plan to develop an intuitive user interface using Streamlit to facilitate easy interaction with the model, enhancing accessibility and usability for potential users.
 
 [Link to Milestone 2 Colab Notebook](https://colab.research.google.com/drive/1OF6WwmYhwjiLKyQqQpcaLXQcdA_jNSw8?usp=sharing)
+
 [Link to Milestone 3 Colab Notebook](https://colab.research.google.com/drive/1kBraPnGcHOQ8sTkCWeyqBjkl_cgf7Qo2?usp=sharing)
 
 ## Dataset
