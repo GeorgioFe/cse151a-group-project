@@ -75,3 +75,9 @@ The results of our model can be seen on the following graphs:
 
 ![metrics](https://github.com/user-attachments/assets/c497cf5e-9e0d-43d6-b768-aaa678fce245)
 
+After 10 epochs:
+- Our train loss was around 0.23 and our train accuracy was around 91%.
+- Our validation loss was around 0.68 and our validation accuracy was around 65%.
+  
+Given these numbers as well as the loss/error curve above, we believe that our first model is overfitting to the train data because as we see with the graphs, the training accuracy is increasing linearly over time, and similarly the training error is decreasing linearly over time, however the validation accuracy, although increased in the long run, it did not increase as the same rate and fashion as the training data. As for the error, we see that the difference between training and validation accuracy is noticeable, which is a sign of overfitting.
+
