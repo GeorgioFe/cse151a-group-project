@@ -68,6 +68,7 @@ Normalization is essential for standardizing the pixel values across all images.
 
 ## First Model
 
+[Link to Colab Notebook for our first model](https://colab.research.google.com/drive/1kBraPnGcHOQ8sTkCWeyqBjkl_cgf7Qo2?usp=sharing)
 
 For our first model, we built a convolutional neural network using TensorFlow and Keras to classify MRI scans into demented and non-demented categories. Our model consisted of several convolutional and max-pooling layers, followed by a fully connected layer. We trained the model with a batch size of 32 for 10 epochs, monitoring its performance using a separate validation set. After training, we evaluated the model on both the training and test datasets to measure its accuracy and loss, and visualized the training progress by plotting the training and validation loss and accuracy over the epochs.
 
@@ -81,14 +82,14 @@ After 10 epochs:
   
 Given these numbers as well as the loss/error curve above, we believe that our first model is overfitting to the train data because as we see with the graphs, the training accuracy is increasing linearly over time, and similarly the training error is decreasing linearly over time, however the validation accuracy, although increased in the long run, it did not increase as the same rate and fashion as the training data. As for the error, we see that the difference between training and validation accuracy is noticeable, which is a sign of overfitting.
 
-<ins>Where does your model fit in the fitting graph?</ins>
+<ins>1. Where does your model fit in the fitting graph?</ins>
 
 Our model is on the right end of the fitting graph (right of the optimal region) as the discrepancy between train and validation error is noticeable.
 
-<ins>What are the next models you are thinking of and why?</ins>
+<ins>2. What are the next models you are thinking of and why?</ins>
 
 Our next move would be to fix the overfitting issue and tune the hyperparameters of our current model to see if we will achieve an improvement from this base model. We plan to stick with this CNN model because from what we see, it is training pretty good on the training data. We just need to fix the overfitting issue and pick better values for our hyperparameters. Also if time permits, we plan on implementing a quantum-based CNN to see if we can achieve even better results.
 
-<ins>What is the conclusion of your 1st model? What can be done to possibly improve it?</ins>
+<ins>3. What is the conclusion of your 1st model? What can be done to possibly improve it?</ins>
 
 The initial model, while effective in achieving a reasonable classification accuracy, showed signs of overfitting, indicating that it was learning noise and unwanted details from the training examples. This overfitting hinders the model's ability to generalize to new data. To address this, we plan to improve the model by incorporating data augmentation techniques to artificially expand the training dataset and make the model more robust. Additionally, we will introduce dropout layers to prevent the model from becoming too reliant on specific neurons, further reducing overfitting. We also plan to conduct hyperparameter tuning to find the optimal parameters for our model, thereby enhancing its performance and generalization capabilities.
