@@ -87,5 +87,8 @@ Our model is on the right end of the fitting graph (right of the optimal region)
 
 <ins>What are the next models you are thinking of and why?</ins>
 
-Our next move would be to fix the overfitting issue and tune the hyperparameters of our current model to see if we will achieve an improvement from this base model. We plan to stick with this CNN model because from what we see, it is training pretty good on the training data we just need to fix the overfitting issue and pick better values for our hyperparameters.
+Our next move would be to fix the overfitting issue and tune the hyperparameters of our current model to see if we will achieve an improvement from this base model. We plan to stick with this CNN model because from what we see, it is training pretty good on the training data. We just need to fix the overfitting issue and pick better values for our hyperparameters. Also if time permits, we plan on implementing a quantum-based CNN to see if we can achieve even better results.
 
+<ins>What is the conclusion of your 1st model? What can be done to possibly improve it?</ins>
+
+The initial model, while effective in achieving a reasonable classification accuracy, showed signs of overfitting, indicating that it was learning noise and unwanted details from the training examples. This overfitting hinders the model's ability to generalize to new data. To address this, we plan to improve the model by incorporating data augmentation techniques to artificially expand the training dataset and make the model more robust. Additionally, we will introduce dropout layers to prevent the model from becoming too reliant on specific neurons, further reducing overfitting. We also plan to conduct hyperparameter tuning to find the optimal parameters for our model, thereby enhancing its performance and generalization capabilities.
