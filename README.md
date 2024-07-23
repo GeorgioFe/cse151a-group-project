@@ -72,6 +72,15 @@ Normalization is essential for standardizing the pixel values across all images.
 
 For our first model, we built a convolutional neural network using TensorFlow and Keras to classify MRI scans into demented and non-demented categories. Our model consisted of several convolutional and max-pooling layers, followed by a fully connected layer. We trained the model with a batch size of 32 for 10 epochs, monitoring its performance using a separate validation set. After training, we evaluated the model on both the training and test datasets to measure its accuracy and loss, and visualized the training progress by plotting the training and validation loss and accuracy over the epochs.
 
+<ins>Model Hyperparameters:</ins>
+
+- Hidden Layers Activation Function: ReLu
+- Output Layer Activation Function: Sigmoid
+- Loss Function: Binary Cross Entropy
+- Optimizer: RMSprop
+- Learning Rate: 0.0001
+
+
 The results of our model can be seen on the following graphs:
 
 ![metrics](https://github.com/user-attachments/assets/c497cf5e-9e0d-43d6-b768-aaa678fce245)
