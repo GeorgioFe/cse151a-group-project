@@ -82,8 +82,10 @@ After 10 epochs:
 Given these numbers as well as the loss/error curve above, we believe that our first model is overfitting to the train data because as we see with the graphs, the training accuracy is increasing linearly over time, and similarly the training error is decreasing linearly over time, however the validation accuracy, although increased in the long run, it did not increase as the same rate and fashion as the training data. As for the error, we see that the difference between training and validation accuracy is noticeable, which is a sign of overfitting.
 
 <ins>Where does your model fit in the fitting graph?</ins>
+
 Our model is on the right end of the fitting graph (right of the optimal region) as the discrepancy between train and validation error is noticeable.
 
 <ins>What are the next models you are thinking of and why?</ins>
+
 Our next move would be to fix the overfitting issue and tune the hyperparameters of our current model to see if we will achieve an improvement from this base model. We plan to stick with this CNN model because from what we see, it is training pretty good on the training data we just need to fix the overfitting issue and pick better values for our hyperparameters.
 
