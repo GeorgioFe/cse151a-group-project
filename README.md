@@ -108,8 +108,27 @@ The initial model, while effective in achieving a reasonable classification accu
 For our second model, we took a couple of steps to ensure the model is not overfitting to the training data as well as changed the structure of our CNN. To solve the overfitting issue, we first augmented our training data, which takes the approach of generating additional training data from our existing examples by augmenting them using random transformations that yield believable-looking images. This helps expose the model to more aspects of the data and generalize better. We then added dropout layers in our CNN, which is another technique to reduce overfitting. When we apply dropout to a layer, it randomly sets the activation function to 0 to some output units from the layer during the training process.
 
 ### 1. Changes that we made:
+
 - For data augmentation, we applied RandomZoom, RandomFlip, and RandomRotation.
 - For dropout layers, we added 1 dropout layer with a rate of 0.5.
 - For the structure of our CNN:
-  1. dfd
+  1. Number of Layers: Our second model has 3 more additional layers compared to our first model.
+  2. Preprocesing Layers: Our second model takes care of the preprocessing inside the neural network, whereas our first model did it outside the NN.
+  3. Dropout Layer: Our second model includes a dropout layer before the dense layer to help reduce overfitting, which is not present in the first model.
 
+### 2. Outcome and Evaluations:
+
+As we see in the graphs below, the model is training much better than our first attempt. The accuracy of the train data is linearly increasing as well as the accuracy of the validation data. Similarly, the error on the train data is linearly decreasing, along with the validation error. This shows that the approach we took to handle the overfitting issue actually worked. We are now in the optimal region on the fitting graph. Additionally, by changing the structure of our CNN, we are now achieving better train and validation accuracy after 100 epochs. Around 93%.
+
+![download (1)](https://github.com/user-attachments/assets/2443020e-2dbe-42d2-806d-853623e63f0e)
+
+As for our test data, we can see our classification report and confusion matrix below:
+
+![Screenshot 2024-07-31 162006](https://github.com/user-attachments/assets/0f2bef2a-475e-4b97-b184-d85df0286e4f)
+
+![download (2)](https://github.com/user-attachments/assets/461f2676-cf6e-4158-8fa2-b94562f53f12)
+
+As we see we are around 75% accuracy on our test data. A 50% improvement from our base model which had an accuracy of 50% on the test data.
+Another thing to note is the recall. Recall measures the proportion of actual positive cases (patients with Alzheimer's) that are correctly identified by the model. In the context of Alzheimer's detection, it is crucial to minimize the number of false negatives, meaning we want to catch as many true cases of Alzheimer's as possible. Missing a diagnosis could delay treatment and support for patients who need it. In our case, the recall for AllDemented is 0.82, which is much better than our first model but can still be improved.
+
+With our third and final model, we will try to increase the test accuracy as well as the recall with the AllDemented class.
