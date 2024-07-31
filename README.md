@@ -102,3 +102,14 @@ Our next move would be to fix the overfitting issue and tune the hyperparameters
 <ins>3. What is the conclusion of your 1st model? What can be done to possibly improve it?</ins>
 
 The initial model, while effective in achieving a reasonable classification accuracy, showed signs of overfitting, indicating that it was learning noise and unwanted details from the training examples. This overfitting hinders the model's ability to generalize to new data. To address this, we plan to improve the model by incorporating data augmentation techniques to artificially expand the training dataset and make the model more robust. Additionally, we will introduce dropout layers to prevent the model from becoming too reliant on specific neurons, further reducing overfitting. We also plan to conduct hyperparameter tuning to find the optimal parameters for our model, thereby enhancing its performance and generalization capabilities.
+
+## Second Model
+
+For our second model, we took a couple of steps to ensure the model is not overfitting to the training data as well as changed the structure of our CNN. To solve the overfitting issue, we first augmented our training data, which takes the approach of generating additional training data from our existing examples by augmenting them using random transformations that yield believable-looking images. This helps expose the model to more aspects of the data and generalize better. We then added dropout layers in our CNN, which is another technique to reduce overfitting. When we apply dropout to a layer, it randomly sets the activation function to 0 to some output units from the layer during the training process.
+
+### 1. Changes that we made:
+- For data augmentation, we applied RandomZoom, RandomFlip, and RandomRotation.
+- For dropout layers, we added 1 dropout layer with a rate of 0.5.
+- For the structure of our CNN:
+  1. dfd
+
