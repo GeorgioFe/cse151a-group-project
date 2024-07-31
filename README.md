@@ -6,6 +6,8 @@ This project aims to develop a multiclass classifier that predicts the presence 
 
 [Link to Milestone 3 Colab Notebook](https://colab.research.google.com/drive/1kBraPnGcHOQ8sTkCWeyqBjkl_cgf7Qo2?usp=sharing)
 
+[Link to Milestone 4 Colab Notebook](https://colab.research.google.com/drive/19JDpgJuJrRr4vNuPY3Ldp5SmB5O1bMZX?usp=sharing)
+
 ## Dataset
 
 [Link to Dataset](https://www.kaggle.com/datasets/tourist55/alzheimers-dataset-4-class-of-images/data)
