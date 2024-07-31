@@ -133,4 +133,6 @@ As for our test data, we can see our classification report and confusion matrix 
 As we see we are around 75% accuracy on our test data. A 50% improvement from our base model which had an accuracy of 50% on the test data.
 Another thing to note is the recall. Recall measures the proportion of actual positive cases (patients with Alzheimer's) that are correctly identified by the model. In the context of Alzheimer's detection, it is crucial to minimize the number of false negatives, meaning we want to catch as many true cases of Alzheimer's as possible. Missing a diagnosis could delay treatment and support for patients who need it. In our case, the recall for AllDemented is 0.82, which is much better than our first model but can still be improved.
 
-With our third and final model, we will try to increase the test accuracy as well as the recall with the AllDemented class.
+With our third and final model, we will try to increase the test accuracy as well as the recall with the AllDemented class via hyperparameter tuning.
+
+## Final Model (Hyperparameter tuning)
