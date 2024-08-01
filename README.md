@@ -145,8 +145,8 @@ We decided to tune 4 hyperparameters:
 
 We achieved this via random search and the outcomes were the following:
 1. The optimal learning rate is 0.0001.
-2. the optimal optimizer is adam.
-3. the optimal activation functions are tanh for conv layers and relu for dense layers.
+2. The optimal optimizer is adam.
+3. The optimal activation functions are tanh for conv layers and relu for dense layers.
 
 We then used those hyperparameters to retrain the model for 100 epochs.
 
