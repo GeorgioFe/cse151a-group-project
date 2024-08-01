@@ -120,7 +120,7 @@ For our second model, we took a couple of steps to ensure the model is not overf
 
 ### 2. Outcome and Evaluations:
 
-As we see in the graphs below, the model is training much better than our first attempt. The accuracy of the train data is linearly increasing as well as the accuracy of the validation data. Similarly, the error on the train data is linearly decreasing, along with the validation error. This shows that the approach we took to handle the overfitting issue actually worked. We are now in the optimal region on the fitting graph. Additionally, by changing the structure of our CNN, we are now achieving better train and validation accuracy after 100 epochs. Around 93%.
+As we see in the graphs below, the model is training much better than our first attempt. The accuracy of the train data is linearly increasing as well as the accuracy of the validation data. Similarly, the error on the train data is linearly decreasing, along with the validation error. This shows that the approach we took to handle the overfitting issue actually worked. We are now in the optimal region on the fitting graph. Additionally, by changing the structure of our CNN, we are now achieving better train and validation accuracy after 100 epochs. Around 92%.
 
 ![download (1)](https://github.com/user-attachments/assets/2443020e-2dbe-42d2-806d-853623e63f0e)
 
@@ -135,4 +135,30 @@ Another thing to note is the recall. Recall measures the proportion of actual po
 
 With our third and final model, we will try to increase the test accuracy as well as the recall with the AllDemented class via hyperparameter tuning.
 
-## Final Model (Hyperparameter tuning)
+## Final Model - Hyperparameter tuning
+
+We decided to tune 4 hyperparameters:
+1. The Learning Rate
+2. The Optimizer
+3. The Activation Function for the Convolution Layers
+4. The Activation Function for the Dense Layers
+
+We achieved this via random search and the outcomes were the following:
+1. The optimal learning rate is 0.0001.
+2. the optimal optimizer is adam.
+3. the optimal activation functions are tanh for conv layers and relu for dense layers.
+
+We then used those hyperparameters to retrain the model for 100 epochs.
+
+As we see in the graphs below, the model is training in a controlled manner and no overfitting is occurring, which is a good sign. However, we did not achieve a significant improvement from our second model, so around 92% accuracy on the train and validation data.
+
+![download (3)](https://github.com/user-attachments/assets/8d8b569b-97c0-4525-936d-eae16e727982)
+
+Here is our classification report and confusion matrix for our final model:
+
+![Screenshot 2024-07-31 162006](https://github.com/user-attachments/assets/63303ba1-e92a-48da-b80b-c6f4ff21bf70)
+
+![download (4)](https://github.com/user-attachments/assets/10dc893a-78e7-421e-ab3a-ec3488216ba7)
+
+As we see, in terms of accuracy, our final model performed worse than the second model. It has an accuracy of 63%. However, if we look at the recall on the AllDemented class, we see that it's at 0.98 which is a big improvement (about 20% improvement) from our previous model. This indicates that only 2% of the time the model is going to miss Alzheimer's detection. The only downside to this is we believe our model is learning to predict AllDemented more often than NonDemented which explains why the low accuracy compared to the recall, however in a task like this it is better to predict false positives than false negatives.
+
