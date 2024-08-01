@@ -10,6 +10,8 @@ This project aims to develop a multiclass classifier that predicts the presence 
 
 [Link to Milestone 4.2 Colab Notebook - Bonus Model: Quantum Convolutional Neural Network (QCNN)](https://colab.research.google.com/drive/1cnEas2VgJCUUgy9E-hLxGMKkn4K7zIyg?usp=sharing)
 
+[Final Report](https://drive.google.com/file/d/1YLZouZ1G4iNTnt36JqUXy1S6OTXRAEsW/view?usp=sharing)
+
 ## Webapp
 
 Coming Soon!
