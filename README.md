@@ -168,3 +168,21 @@ Here is our classification report and confusion matrix for our final model:
 
 As we see, in terms of accuracy, our final model performed worse than the second model. It has an accuracy of 63%. However, if we look at the recall on the AllDemented class, we see that it's at 0.98 which is a big improvement (about 20% improvement) from our previous model. This indicates that only 2% of the time the model is going to miss Alzheimer's detection. The only downside to this is we believe our model is learning to predict AllDemented more often than NonDemented which explains why the low accuracy compared to the recall, however in a task like this it is better to predict false positives than false negatives.
 
+## Bonus Model - Quantum Neural Network
+
+We know the matrix computation for classic computer is expensive, so we tried to find the feasibility of training the neural network as a quantum approach. 
+
+<ins>Feature Maps:</ins>
+Based on our research, the industry latest quantum computer can handle around 500 qubits at a time. However, when training neural network, we need to treat each pixel as a feature for the input. We have over 30,000 pixels for each picture in our dataset, it is impossible to convert all the features into quantum states. We need to find a way to reduce the quantity of features we have. The most straight forward method is downscaling. It can reduce the number of features to the maximum number that we can handle. However, this approach could loss a lot of information.
+
+<ins>Improvement Idea:</ins>
+In order to increase the accuracy of our model and reduce the impact of the information loss, we have an idea to improve the model. Theoretically, we can cut an image into smaller parts with the same size that could handled by a quantum computer, then we train these small parts first and check the accuracy to see if the patch of the image is useful for us. Then we use the accuracy and the mean value of that small patch as new features for next round training. After several rounds of iteration, we can train a large image with multiple smaller parts. There is no rigorous prove for this idea, and this approach could also cause some issue after data augmentation. But it seems doable with the dataset we chose.
+
+<ins>Data Preprocessing:</ins>
+Basically, the data preprocessing of the quantum part is very similar to what we do for the traditional machine learning. We just ensure our data are normalized, and downscaled all the images to make sure we are able to convert each feature into a limited number of superstates. We also separated the whole dataset into the training set, validation set and a test set. 
+
+<ins>Create Quantum Circuit:</ins>
+We need to design the quantum circuit based on our model in quantum computation. It is a sequence of quantum gates that represents the transformation on the quantum states. In our model, we downscaled the image into 256 pixels. So we need to initialize a 16 x 16 grid of qubits which represents 256 qubits. In order to tranlate the image data into quantum states, we applied a X gate, which means NOT, to each state where the pixel value is non-zero.
+
+<ins>Quantum Neural Network:</ins>
+We used cirq and tensorflow_quantum libraries to help us build the QNN. The basic idea is that we apply a Hardamard gate to each quantum states to convert them into super positions. Then we add some layers like ZZ or XX. After that, we add Hardamard gates one more time, and measure the results that a quantum computer calculated. Then we do the same as a traditional quantum computer does. We compile our model with our ideal loss function and optimizer, and fit our data with specific batch size and epochs. But for this time, we do not need to care about the matrix calculation and activation functions.
