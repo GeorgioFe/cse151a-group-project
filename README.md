@@ -188,4 +188,3 @@ We need to design the quantum circuit based on our model in quantum computation.
 
 <ins>Quantum Neural Network:</ins>
 We used cirq and tensorflow_quantum libraries to help us build the QNN. The basic idea is that we apply a Hardamard gate to each quantum states to convert them into super positions. Then we add some layers like ZZ or XX. After that, we add Hardamard gates one more time, and measure the results that a quantum computer calculated. Then we do the same as a traditional quantum computer does. We compile our model with our ideal loss function and optimizer, and fit our data with specific batch size and epochs. But for this time, we do not need to care about the matrix calculation and activation functions.
-=======
